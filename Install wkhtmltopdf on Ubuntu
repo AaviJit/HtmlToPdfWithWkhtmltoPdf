@@ -1,0 +1,24 @@
+######Install wkhtmltopdf on Ubuntu#########
+
+1. Open terminal
+
+2. sudo apt-get update
+
+3. sudo apt-get install xvfb libfontconfig wkhtmltopdf
+
+4. Test by executing the command: wkhtmltopdf http://www.google.com google.pdf
+
+
+5. cd /usr/bin/
+
+6. sudo nano wkhtmltopdf.sh
+
+7. Paste: xvfb-run -a -s "-screen 0 640x480x16" wkhtmltopdf "$@"
+
+8. Save and exit
+
+9. sudo chmod a+x /usr/bin/wkhtmltopdf.sh
+
+10. Check by executing: /usr/local/bin/wkhtmltopdf.sh http://www.google.com test.pdf
+
+11. Now In Spring project, initialise using: WkHtmlToPdf pdf = new WkHtmlToPdf("/usr/bin/wkhtmltopdf.sh");

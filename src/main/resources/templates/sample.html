@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sf="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Student List</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+
+    <h1 style="text-align:center;">Students List</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Session</th>
+            <th>Department</th>
+            <th>Roll</th>
+            <th>Mobile</th>
+        </tr>
+
+        <tr th:each="student : ${studentList}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.session}"></td>
+            <td th:text="${student.department}"></td>
+            <td th:text="${student.roll}"></td>
+            <td th:text="${student.mobile}"></td>
+        </tr>
+
+    </table>
+
+    <a th:href="@{/getStudentsListAsPdf}">Download Pdf</a>
+</div>
+</body>
+</html>
