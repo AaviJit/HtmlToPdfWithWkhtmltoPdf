@@ -62,7 +62,7 @@ public class PdfDemo {
     {
         WkHtmlToPdf pdf = new WkHtmlToPdf("/usr/bin/wkhtmltopdf.sh");
         //String types = StringUtils.join(studentList, ",");
-pdf.addArguments(Argument.from(Option.GlobalOption.Orientation, “Landscape”));
+
 
         try {
             pdf.addSources(Source.fromUrl(getServerAbsolutePath(SERVER_REPORT_URL)));

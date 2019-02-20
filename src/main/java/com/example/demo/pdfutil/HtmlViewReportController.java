@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.pdfutil;
 
 import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,6 @@ public class HtmlViewReportController {
     @GetMapping(value = "/report/html")
     public String getPdfReportForStudent(Model model) {
         model.addAttribute("studentList", studentService.findAll());
-        return "sample";
+        return "sample2";
     }
 }

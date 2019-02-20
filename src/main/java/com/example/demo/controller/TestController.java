@@ -26,5 +26,4 @@ public class TestController {
         model.addAttribute(studentList);
         return "sample";
     }
-
 }
